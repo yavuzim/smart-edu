@@ -1,4 +1,6 @@
 from django.db import models
+from PIL import Image
+import os
 
 class Course(models.Model):
     #name = models.CharField(max_length=200, unique=True,verbose_name="Kurs Adı", help_text="Kurs adını yazınız")
@@ -9,4 +11,4 @@ class Course(models.Model):
     available = models.BooleanField(default=True)
 
     def __str__(self):
-        return self.name
+        return self.name    
